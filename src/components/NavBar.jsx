@@ -14,7 +14,7 @@ const closeNavbar = () => {
 function NavBar() {
     return (
         <>
-            <nav className="navbar navbar-expand-md fixed-top bg-dark border-bottom border-white">
+            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark border-bottom border-white">
                 <div className="container">
                     <Link to="/" className="navbar-brand" onClick={closeNavbar}>BlindWings</Link>
 
