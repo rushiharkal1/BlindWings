@@ -5,8 +5,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import './styles/App.css';
 
 // Components
-// import NavBar from './components/NavBar.jsx';
-// import Footer from './components/Footer.jsx';
+import NavBar from './components/NavBar.jsx';
+import Footer from './components/Footer.jsx';
 
 // Website Pages
 import HomePage from './pages/HomePage.jsx';
@@ -18,7 +18,7 @@ function App() {
 		<>
 
 			{/* This part is navbar */}
-		  {/* <NavBar /> */}
+			<NavBar />
 	
 		    {/* This part will change based on the Route path */}	
 		    <main className='main-content'>
@@ -26,6 +26,10 @@ function App() {
 			        {/* Other routes */}
 		            <Route path="/" element={<Navigate to="/home" />} />
 		            <Route path="/home" element={<HomePage />} />
+					<Route path="/quotes" element={<HomePage />} />
+					<Route path="/faqs" element={<HomePage />} />
+					<Route path="/privacy" element={<HomePage />} />
+					<Route path="/about" element={<HomePage />} />
 		            
 		            {/* Catch-all route for undefined paths */}
 		            <Route path="*" element={<NotFound />} />
@@ -33,7 +37,7 @@ function App() {
 		    </main>
 		      
 			{/* This part is footer */}
-		  {/* <Footer /> */}
+		  	<Footer />
 		</>
     );
 }
