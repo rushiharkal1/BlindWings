@@ -10,6 +10,10 @@ import Footer from './components/Footer.jsx';
 
 // Website Pages
 import HomePage from './pages/HomePage.jsx';
+import FAQs from './pages/FAQs.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import AboutUs from './pages/AboutUs.jsx';
+
 import NotFound from './pages/NotFound.jsx';
 
 
@@ -27,9 +31,9 @@ function App() {
 		            <Route path="/" element={<Navigate to="/home" />} />
 		            <Route path="/home" element={<HomePage />} />
 					<Route path="/quotes" element={<HomePage />} />
-					<Route path="/faqs" element={<HomePage />} />
-					<Route path="/privacy" element={<HomePage />} />
-					<Route path="/about" element={<HomePage />} />
+					<Route path="/faqs" element={<FAQs />} />
+					<Route path="/privacy" element={<PrivacyPolicy />} />
+					<Route path="/about" element={<AboutUs />} />
 		            
 		            {/* Catch-all route for undefined paths */}
 		            <Route path="*" element={<NotFound />} />
