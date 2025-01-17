@@ -1,0 +1,65 @@
+/* HomePage.css */
+/* keyframes and animation effects for animated text: Start */
+@keyframes colorCycle {
+    0% {
+        color: #198754;
+    }
+    33% {
+        color: #ffcc00;
+    }
+    66% {
+        color: #ff5733;
+    }
+    100% {
+        color: #198754;
+    }
+}
+
+.hover-effect {
+    transition: text-shadow 0.5s;
+    display: inline-block;
+    padding: 4px 4px;
+    border-radius: 5px;
+}
+
+.hover-effect:hover {
+    animation: colorCycle 3s infinite;
+    text-shadow: 3px 3px 5px #198754;
+}
+
+.explore-button:hover {
+    transition: color 0.2s, box-shadow 0.2s;
+    color: #198754 ;
+    box-shadow: 0px 4px 8px rgba(25, 135, 84, 0.5);
+}
+
+.refresh-button:hover {
+    transition: color 0.2s, box-shadow 0.2s;
+    color: #dc3545 ;
+    box-shadow: 0px 4px 8px #7e1c25;
+}
+/* keyframes and animation effects for animated text: End */
+
+/* Ensure cover-container styles are still applied */
+.cover-container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-left: 5px solid #dc3545;
+    border-right: 5px solid #dc3545;
+    /* box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5); */
+}
+
+.blockquote-div {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
