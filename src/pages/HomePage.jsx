@@ -12,20 +12,6 @@ function HomePage() {
             setAllQuotes(data);
             const randomQuote = data[Math.floor(Math.random() * (data.length-1))];
             setQuote(randomQuote);
-
-            // // const randomQuote = data[Math.floor(Math.random() * data.length)];
-            // // setQuote(randomQuote);
-
-            // // Get current date
-            // const today = new Date();
-            // const day = today.getDate();
-            // // Months are 0-based
-            // const month = today.getMonth() + 1;
-            // const year = today.getFullYear();
-
-            // // Generate a fixed index for today
-            // const index = (day + month + year) % data.length; // Cycles through quotes
-            // setQuote(data[index]); // Select quote for today
         }).catch(error => console.error('Error loading CSV file:', error));
     }, []); 
         
@@ -37,7 +23,7 @@ function HomePage() {
     };
 
     const copyQuote = (quote) => {
-        const text = `"${quote.quote}"\n\n- ${quote.author}`;
+        const text = `Quote: "${quote.quote}"\n\nAuthor: ${quote.author}\n\nThis quote explores themes and ideas related to ${quote.category}.`;
         navigator.clipboard.writeText(text).then(() => {
             alert('Quote copied to clipboard!');
         }).catch(err => console.error('Failed to copy text: ', err));
@@ -52,7 +38,7 @@ function HomePage() {
                     ))}
                 </h1>
                 <p className="lead">
-                    {['Discover', 'the', 'wisdom', 'of', 'the', 'ages,', 'one', 'quote', 'at', 'a', 'time.', 'At', 'Blind', 'Wings,', 'we', 'curate', 'the', 'most', 'inspiring,', 'thought-provoking,', 'and', 'motivational', 'quotes', 'to', 'uplift', 'your', 'spirit', 'and', 'ignite', 'your', 'passion.', 'Dive', 'into', 'a', 'collection', 'of', 'timeless', 'words', 'that', 'resonate,', 'empower,', 'and', 'guide', 'you', 'on', 'your', 'journey.'].map((word, index) => (
+                    {['Discover', 'the', 'wisdom', 'of', 'the', 'ages,', 'one', 'quote', 'at', 'a', 'time.', 'At', 'BlindWings,', 'we', 'curate', 'the', 'most', 'inspiring,', 'thought-provoking,', 'and', 'motivational', 'quotes', 'to', 'uplift', 'your', 'spirit', 'and', 'ignite', 'your', 'passion.', 'Dive', 'into', 'a', 'collection', 'of', 'timeless', 'words', 'that', 'resonate,', 'empower,', 'and', 'guide', 'you', 'on', 'your', 'journey.'].map((word, index) => (
                         <span key={index} className="hover-effect">{word} </span>
                     ))}
                 </p>
@@ -67,7 +53,7 @@ function HomePage() {
                         {/* Move Copy Button to Bottom-Right */}
                         <div className="d-flex justify-content-end mt-3">
                             <button 
-                                className="btn btn-outline-danger btn-sm copy-button"
+                                className="btn btn-outline-danger btn-sm"
                                 onClick={() => copyQuote(quote)}
                             >
                                 Copy

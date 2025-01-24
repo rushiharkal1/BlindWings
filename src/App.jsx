@@ -13,7 +13,7 @@ import HomePage from './pages/HomePage.jsx';
 import FAQs from './pages/FAQs.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import AboutUs from './pages/AboutUs.jsx';
-
+import QuotesPage from './pages/QuotePage.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 
@@ -30,7 +30,7 @@ function App() {
 			        {/* Other routes */}
 		            <Route path="/" element={<Navigate to="/home" />} />
 		            <Route path="/home" element={<HomePage />} />
-					<Route path="/quotes" element={<HomePage />} />
+					<Route path="/quotes" element={<QuotesPage />} />
 					<Route path="/faqs" element={<FAQs />} />
 					<Route path="/privacy" element={<PrivacyPolicy />} />
 					<Route path="/about" element={<AboutUs />} />
